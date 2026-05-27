@@ -121,13 +121,13 @@ export default function Home() {
               <Image src="/images/project_zero_trust.png" alt="Zero Trust Architecture" width={400} height={200} className={styles.cardImage} />
               <h3 className={styles.cardTitle}>Zero Trust Cloud Implementation</h3>
               <p className={styles.cardDesc}>Designing scalable, identity-first cloud architectures prioritizing least privilege and robust governance across multicloud environments.</p>
-              <Link href="/projects" className={styles.cardLink}>View Details &rarr;</Link>
+              <Link href="/projects/zero-trust-cloud" className={styles.cardLink}>View Details &rarr;</Link>
             </div>
             <div className={`${styles.card} glass reveal`}>
               <Image src="/images/project_iam.png" alt="Automated IAM" width={400} height={200} className={styles.cardImage} />
               <h3 className={styles.cardTitle}>Automated IAM Lifecycle</h3>
               <p className={styles.cardDesc}>Integrating HRIS driven provisioning with modern identity platforms using infrastructure as code and API-driven automation.</p>
-              <Link href="/projects" className={styles.cardLink}>View Details &rarr;</Link>
+              <Link href="/projects/automated-iam" className={styles.cardLink}>View Details &rarr;</Link>
             </div>
           </div>
           <div style={{ textAlign: "center", marginTop: "4rem" }}>
@@ -202,13 +202,13 @@ export default function Home() {
               <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
               <h3 className={styles.cardTitle}>The Evolution of IAM in Cloud-Native Environments</h3>
               <p className={styles.cardDesc}>A look into how identity is becoming the new perimeter and what that means for traditional network security architectures.</p>
-              <Link href="/blog" className={styles.cardLink}>Read Post &rarr;</Link>
+              <Link href="/blog/iam-evolution" className={styles.cardLink}>Read Post &rarr;</Link>
             </div>
             <div className={`${styles.card} glass reveal`}>
                <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
               <h3 className={styles.cardTitle}>Bridging the Gap: DevSecOps in Practice</h3>
               <p className={styles.cardDesc}>Practical strategies for integrating security controls into CI/CD pipelines without slowing down engineering velocity.</p>
-              <Link href="/blog" className={styles.cardLink}>Read Post &rarr;</Link>
+              <Link href="/blog/devsecops-practice" className={styles.cardLink}>Read Post &rarr;</Link>
             </div>
           </div>
           <div style={{ textAlign: "center", marginTop: "4rem" }}>

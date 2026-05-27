@@ -42,13 +42,13 @@ export default function ProjectsPage() {
             <Image src="/images/project_zero_trust.png" alt="Zero Trust Architecture" width={400} height={200} className={styles.cardImage} />
             <h3 className={styles.cardTitle}>Zero Trust Cloud Implementation</h3>
             <p className={styles.cardDesc}>Designing scalable, identity-first cloud architectures prioritizing least privilege and robust governance across multicloud environments. Leveraging modern frameworks to ensure continuous verification of identities and devices before granting access.</p>
-            <a href="#" className={styles.cardLink}>Coming Soon &rarr;</a>
+            <Link href="/projects/zero-trust-cloud" className={styles.cardLink}>View Details &rarr;</Link>
           </div>
           <div className={`${styles.card} glass`}>
             <Image src="/images/project_iam.png" alt="Automated IAM" width={400} height={200} className={styles.cardImage} />
             <h3 className={styles.cardTitle}>Automated IAM Lifecycle</h3>
             <p className={styles.cardDesc}>Integrating HRIS driven provisioning with modern identity platforms using infrastructure as code and API-driven automation. This project eliminated manual provisioning errors and drastically reduced onboarding times.</p>
-            <a href="#" className={styles.cardLink}>Coming Soon &rarr;</a>
+            <Link href="/projects/automated-iam" className={styles.cardLink}>View Details &rarr;</Link>
           </div>
           <div className={`${styles.card} glass`}>
              <div style={{ height: "200px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>

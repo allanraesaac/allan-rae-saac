@@ -41,14 +41,14 @@ export default function BlogPage() {
             <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
             <h3 className={styles.cardTitle}>The Evolution of IAM in Cloud-Native Environments</h3>
             <p className={styles.cardDesc}>A look into how identity is becoming the new perimeter and what that means for traditional network security architectures. We explore OAuth, OIDC, and zero trust models applied to modern workloads.</p>
-            <a href="#" className={styles.cardLink}>Coming Soon &rarr;</a>
+            <Link href="/blog/iam-evolution" className={styles.cardLink}>Read Post &rarr;</Link>
           </div>
           
           <div className={`${styles.card} glass`}>
              <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
             <h3 className={styles.cardTitle}>Bridging the Gap: DevSecOps in Practice</h3>
             <p className={styles.cardDesc}>Practical strategies for integrating security controls into CI/CD pipelines without slowing down engineering velocity. Real-world examples of embedding security directly into the developer workflow.</p>
-            <a href="#" className={styles.cardLink}>Coming Soon &rarr;</a>
+            <Link href="/blog/devsecops-practice" className={styles.cardLink}>Read Post &rarr;</Link>
           </div>
 
           <div className={`${styles.card} glass`}>
