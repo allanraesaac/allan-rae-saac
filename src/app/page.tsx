@@ -142,15 +142,41 @@ export default function Home() {
           <h2 className={styles.sectionTitle}>
             Active <span className="text-gradient">Certifications</span>
           </h2>
-          <div className={styles.certsGrid}>
-            <div className={`${styles.certCard} glass reveal`}>CISSP</div>
-            <div className={`${styles.certCard} glass reveal`}>CRISC</div>
-            <div className={`${styles.certCard} glass reveal`}>Security+</div>
-            <div className={`${styles.certCard} glass reveal`}>AWS Cloud Practitioner</div>
-            <div className={`${styles.certCard} glass reveal`}>Azure Fundamentals</div>
-            <div className={`${styles.certCard} glass reveal`}>ITIL 4</div>
-            <div className={`${styles.certCard} glass reveal`}>Google Cybersecurity Certificate</div>
-            <div className={`${styles.certCard} glass reveal`}>Secure Development with AI</div>
+          
+          <div className={styles.marqueeWrapper}>
+            {/* First Row (Scrolling Left) */}
+            <div className={styles.marquee}>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>(ISC)² CISSP</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISACA CRISC</div>
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS Cloud Practitioner</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>CompTIA Security+</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>Secure Dev with AI</div>
+              
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>(ISC)² CISSP</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISACA CRISC</div>
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS Cloud Practitioner</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>CompTIA Security+</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>Secure Dev with AI</div>
+            </div>
+            
+            {/* Second Row (Scrolling Right) */}
+            <div className={styles.marqueeReverse} style={{ marginTop: "1rem" }}>
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>Azure Fundamentals</div>
+              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>ITIL 4 Foundation</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Google Cybersecurity</div>
+              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>Agile Methodologies</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>AI Security & Privacy</div>
+              
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>Azure Fundamentals</div>
+              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>ITIL 4 Foundation</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Google Cybersecurity</div>
+              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>Agile Methodologies</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>AI Security & Privacy</div>
+            </div>
+          </div>
+          
+          <div style={{ textAlign: "center", marginTop: "3rem" }}>
+            <Link href="/certifications" className={styles.btnSecondary}>View All Certifications &rarr;</Link>
           </div>
         </div>
       </section>
