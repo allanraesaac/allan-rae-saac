@@ -1,0 +1,162 @@
+   
+Contact
+allanraesaac@gmail.com
+www.linkedin.com/in/allanraesaac
+(LinkedIn)
+Top Skills
+IT Risk Management
+Cloud Security
+Identity & Access Management
+(IAM)
+Certifications
+Certified Information Systems
+Security Professional (CISSP)
+Google Cybersecurity Certificate
+Introduction to Secure Development
+with AI Assistants
+Allan Rae Saac
+DevSecOps | IT Risk & Cybersecurity | CISSP & CRISC | Cloud
+Security | IAM | Bridging Security, Risk & Engineering
+Puerto Princesa, Mimaropa, Philippines
+Summary
+I am an IT Risk and Cybersecurity professional with over 10 years
+of experience in IT and 5+ years specializing in IAM, security
+governance, and enterprise risk.My background has largely focused
+on bridging security, compliance, and operational realities across
+enterprise environments — particularly in areas such as:• Identity
+&amp; Access Management (IAM)• Vulnerability Management• IT
+Risk &amp; GRC• Security control implementation• Compliance
+and governance supportRecently, I’ve been transitioning deeper
+into DevOps and cloud-focused environments to better understand
+how security can be embedded directly into systems, pipelines, and
+engineering workflows.I’m particularly interested in:• DevSecOps and
+RiskOps• Cloud Security Architecture• Security automation• CI/CD
+security integration• Risk-aware engineering practicesMy long-term
+goal is to help design secure, scalable, and practical cloud-native
+systems where security becomes part of the architecture — not just
+an afterthought.Certifications:CISSP | CRISC | Security+ | AWS
+Cloud Practitioner | Azure Fundamentals | ITIL 4I enjoy learning,
+building, and sharing insights at the intersection of security, risk, and
+engineering.
+Experience
+ING
+IT Risk Ops Engineer
+September 2023 - Present (2 years 9 months)
+• Led execution and continuous improvement of IT risk controls, SOx
+compliance activities, and security operations across multiple enterprise
+domains, including IAM, Vulnerability Management, Security Monitoring, and
+Change Management. 
+• Managed end-to-end control execution and audit readiness for critical
+applications, driving high-quality evidence validation, remediation follow-
+through, and improved audit outcomes. 
+  Page 1 of 4
+   
+• Drove Vulnerability Management initiatives by coordinating remediation
+activities, validating security findings, prioritizing risk treatment, and
+collaborating with security and DevOps teams on SAST, SCA, DAST, and
+infrastructure-related issues. 
+• Participated in penetration testing, Secure SDLC, and security governance
+improvement initiatives, helping strengthen security integration into
+development and operational workflows. 
+• Designed and enhanced security analytics automation and monitoring
+processes, reducing manual operational effort and improving visibility into
+anomalous activities and control effectiveness. 
+• Contributed to cross-functional initiatives involving IT Resilience,
+privileged access governance, lifecycle management, and security process
+improvements across enterprise environments.
+Palawan Pawnshop
+15 years 9 months
+Information Security - User Access Mgmt Section Head
+July 2021 - July 2023 (2 years 1 month)
+Palawan
+• Led an IAM team supporting 15,000+ employees and 6,000+ external
+partners, managing end-to-end identity lifecycle processes across Active
+Directory, Azure AD, SAP SuccessFactors, Keycloak, and internally developed
+platforms. 
+• Strengthened enterprise access governance by implementing role-
+based access control (RBAC), least privilege principles, and access matrix
+standardization, improving both security posture and operational efficiency. 
+• Served as a key contributor to regulatory and audit readiness initiatives,
+preparing and validating security control evidence to support BSP compliance
+and internal governance requirements. 
+• Collaborated with business and technical teams to integrate HRIS and Active
+Directory workflows, improving provisioning accuracy, automation, and identity
+management process efficiency. 
+• Supported operational resilience and knowledge continuity through team
+mentoring, process documentation, and delivery of IAM-related training and
+procedural guidance. 
+• Participated in Change Advisory Board (CAB) activities to help align
+infrastructure and application changes with security, compliance, and
+operational governance standards.
+System Administration Team Leader
+  Page 2 of 4
+   
+January 2018 - June 2021 (3 years 6 months)
+Palawan
+• Led a cross-functional infrastructure operations team composed of System
+Administrators, Database Administrators, and Data Center Operators, ensuring
+operational stability, service continuity, and adherence to documented
+operational standards. 
+• Managed and coordinated multiple IT initiatives and operational projects
+in collaboration with internal stakeholders and third-party vendors, including
+Online Payment Portal, Helpdesk System, Data Analytics initiatives, and
+MySQL-based reporting solutions. 
+• Designed and implemented segregation of development, testing, acceptance,
+and production server environments in partnership with Application Support
+teams, improving change management practices, operational governance, and
+security posture. 
+• Strengthened operational compliance through the implementation and
+enforcement of standardized procedures, documentation practices, and
+infrastructure governance controls aligned with organizational and regulatory
+requirements.
+System And Database Administrator
+January 2014 - December 2017 (4 years)
+Palawan
+• Managed and maintained enterprise infrastructure and internally developed
+systems, supporting operational stability, issue resolution, and continuous
+service availability across distributed business operations. 
+• Coordinated deployment and operational support of core business
+applications, including remittance, pawning, and money-changing systems,
+across nationwide branch environments. 
+• Collaborated with cross-functional technical and business teams to
+implement system improvements and operational enhancements that
+streamlined workflows and improved service efficiency. 
+• Investigated and resolved infrastructure and application-related incidents,
+contributing to reduced downtime and improved system reliability across
+operational environments.
+IT Data Center Operations Supervisor
+January 2011 - December 2013 (3 years)
+Palawan
+• Supervised data center operations across four geographically distributed
+locations, helping maintain operational continuity, infrastructure stability, and
+high service availability. 
+  Page 3 of 4
+   
+• Coordinated operational processes and incident response activities to
+support uninterrupted delivery of business-critical IT services. 
+• Improved operational efficiency and service reliability through process
+standardization, proactive monitoring, and infrastructure support coordination.
+Information Technology Lead Engineer
+January 2009 - December 2010 (2 years)
+Iloilo
+• Led on-site deployment, maintenance, and support activities for branch IT
+systems, improving operational responsiveness and infrastructure reliability
+across assigned locations. 
+• Reduced operational disruptions through proactive troubleshooting,
+preventive maintenance, and timely resolution of infrastructure and system
+issues. 
+• Coordinated system upgrade and rollout initiatives, supporting smooth
+implementation and minimizing operational downtime during deployment
+activities.
+Information Technology Field Engineer
+November 2007 - December 2008 (1 year 2 months)
+Aklan, Western Visayas, Philippines
+• Performed installation, maintenance, and technical support for branch IT
+infrastructure and end-user systems across multiple operational sites. 
+• Supported network troubleshooting and infrastructure issue resolution to
+improve system stability and operational continuity. 
+• Assisted in maintaining reliable day-to-day IT operations through field
+support, preventive maintenance, and technical coordination activities.
+Education
+STI College Puerto Princesa
+  Page 4 of 4
