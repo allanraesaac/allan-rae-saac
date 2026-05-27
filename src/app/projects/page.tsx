@@ -66,7 +66,7 @@ export default function ProjectsPage() {
       </section>
 
       <footer className={styles.footer}>
-        &copy; {new Date().getFullYear()} Allan Rae Saac. Enterprise Meets Edgy.
+        &copy; {new Date().getFullYear()} Allan Rae Saac.
       </footer>
     </main>
   );

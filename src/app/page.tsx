@@ -140,38 +140,48 @@ export default function Home() {
       <section id="certifications" className="reveal">
         <div className={styles.sectionContent}>
           <h2 className={styles.sectionTitle}>
-            Active <span className="text-gradient">Certifications</span>
+            <span className="text-gradient">Certifications</span>
           </h2>
           
           <div className={styles.marqueeWrapper}>
             {/* First Row (Scrolling Left) */}
             <div className={styles.marquee}>
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>(ISC)² CISSP</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>AI for Blue Security</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>Azure AI Fundamentals</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISACA CRISC</div>
-              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS Cloud Practitioner</div>
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>CompTIA Security+</div>
-              <div className={`${styles.certBadge} ${styles.badgeAI}`}>Secure Dev with AI</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Threat Model</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISC2 CISSP</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Google Cybersecurity</div>
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>Azure Fundamentals</div>
+              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>ITIL 4 Foundation</div>
               
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>(ISC)² CISSP</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>AI for Blue Security</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>Azure AI Fundamentals</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISACA CRISC</div>
-              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS Cloud Practitioner</div>
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>CompTIA Security+</div>
-              <div className={`${styles.certBadge} ${styles.badgeAI}`}>Secure Dev with AI</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Threat Model</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISC2 CISSP</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Google Cybersecurity</div>
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>Azure Fundamentals</div>
+              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>ITIL 4 Foundation</div>
             </div>
             
             {/* Second Row (Scrolling Right) */}
             <div className={styles.marqueeReverse} style={{ marginTop: "1rem" }}>
-              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>Azure Fundamentals</div>
-              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>ITIL 4 Foundation</div>
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Google Cybersecurity</div>
-              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>Agile Methodologies</div>
-              <div className={`${styles.certBadge} ${styles.badgeAI}`}>AI Security & Privacy</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>Secure Dev with AI</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Blue Security Champions</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISC2 CC</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>CompTIA Security+</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Microsoft SC-900</div>
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS Cloud Practitioner</div>
+              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>Microservices</div>
               
-              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>Azure Fundamentals</div>
-              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>ITIL 4 Foundation</div>
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Google Cybersecurity</div>
-              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>Agile Methodologies</div>
-              <div className={`${styles.certBadge} ${styles.badgeAI}`}>AI Security & Privacy</div>
+              <div className={`${styles.certBadge} ${styles.badgeAI}`}>Secure Dev with AI</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Blue Security Champions</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISC2 CC</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>CompTIA Security+</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Microsoft SC-900</div>
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS Cloud Practitioner</div>
+              <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>Microservices</div>
             </div>
           </div>
           
@@ -224,7 +234,7 @@ export default function Home() {
       </section>
 
       <footer className={styles.footer}>
-        &copy; {new Date().getFullYear()} Allan Rae Saac. Enterprise Meets Edgy.
+        &copy; {new Date().getFullYear()} Allan Rae Saac.
       </footer>
     </main>
   );
