@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./page.module.css";
 
 export default function Home() {
@@ -30,11 +31,12 @@ export default function Home() {
           <span className="text-gradient">A.S.</span>
         </div>
         <div className={styles.navLinks}>
-          <a href="#about">About</a>
-          <a href="#experience">Experience</a>
-          <a href="#certifications">Certifications</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <Link href="/#about">About</Link>
+          <Link href="/#experience">Experience</Link>
+          <Link href="/#projects">Projects</Link>
+          <Link href="/#certifications">Certifications</Link>
+          <Link href="/#blog">Blog</Link>
+          <Link href="/#contact">Contact</Link>
         </div>
       </nav>
 
@@ -101,14 +103,35 @@ export default function Home() {
                 Led a cross-functional infrastructure operations team ensuring stability and service continuity. Designed and implemented segregation of dev/test/prod environments, improving change management practices and security posture.
               </p>
             </div>
-            <div className={`${styles.timelineItem} reveal`}>
-              <div className={styles.timelineDot}></div>
-              <h3 className={styles.timelineTitle}>System And Database Administrator</h3>
-              <p className={styles.timelineSubtitle}>Palawan Pawnshop &bull; Jan 2014 - Dec 2017</p>
-              <p className={styles.timelineDesc}>
-                Managed enterprise infrastructure supporting core business applications nationwide. Investigated and resolved application-related incidents, significantly reducing downtime.
-              </p>
+          </div>
+          <div style={{ textAlign: "center", marginTop: "3rem" }}>
+            <Link href="/experience" className={styles.btnSecondary}>See More Journey &rarr;</Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Projects */}
+      <section id="projects" className="reveal">
+        <div className={styles.sectionContent}>
+          <h2 className={styles.sectionTitle}>
+            Featured <span className="text-gradient">Projects</span>
+          </h2>
+          <div className={styles.grid}>
+            <div className={`${styles.card} glass reveal`}>
+              <Image src="/images/project_zero_trust.png" alt="Zero Trust Architecture" width={400} height={200} className={styles.cardImage} />
+              <h3 className={styles.cardTitle}>Zero Trust Cloud Implementation</h3>
+              <p className={styles.cardDesc}>Designing scalable, identity-first cloud architectures prioritizing least privilege and robust governance across multicloud environments.</p>
+              <Link href="/projects" className={styles.cardLink}>View Details &rarr;</Link>
             </div>
+            <div className={`${styles.card} glass reveal`}>
+              <Image src="/images/project_iam.png" alt="Automated IAM" width={400} height={200} className={styles.cardImage} />
+              <h3 className={styles.cardTitle}>Automated IAM Lifecycle</h3>
+              <p className={styles.cardDesc}>Integrating HRIS driven provisioning with modern identity platforms using infrastructure as code and API-driven automation.</p>
+              <Link href="/projects" className={styles.cardLink}>View Details &rarr;</Link>
+            </div>
+          </div>
+          <div style={{ textAlign: "center", marginTop: "4rem" }}>
+            <Link href="/projects" className={styles.btnPrimary}>View All Projects</Link>
           </div>
         </div>
       </section>
@@ -132,25 +155,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Projects */}
-      <section id="projects" className="reveal">
+      {/* Blog */}
+      <section id="blog" className="reveal">
         <div className={styles.sectionContent}>
           <h2 className={styles.sectionTitle}>
-            Future <span className="text-gradient">Projects</span>
+            Latest <span className="text-gradient">Insights</span>
           </h2>
           <div className={styles.grid}>
             <div className={`${styles.card} glass reveal`}>
-              <Image src="/images/project_zero_trust.png" alt="Zero Trust Architecture" width={400} height={200} className={styles.cardImage} />
-              <h3 className={styles.cardTitle}>Zero Trust Cloud Implementation</h3>
-              <p className={styles.cardDesc}>Designing scalable, identity-first cloud architectures prioritizing least privilege and robust governance across multicloud environments.</p>
-              <a href="#" className={styles.cardLink}>Coming Soon &rarr;</a>
+              <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
+              <h3 className={styles.cardTitle}>The Evolution of IAM in Cloud-Native Environments</h3>
+              <p className={styles.cardDesc}>A look into how identity is becoming the new perimeter and what that means for traditional network security architectures.</p>
+              <Link href="/blog" className={styles.cardLink}>Read Post &rarr;</Link>
             </div>
             <div className={`${styles.card} glass reveal`}>
-              <Image src="/images/project_iam.png" alt="Automated IAM" width={400} height={200} className={styles.cardImage} />
-              <h3 className={styles.cardTitle}>Automated IAM Lifecycle</h3>
-              <p className={styles.cardDesc}>Integrating HRIS driven provisioning with modern identity platforms using infrastructure as code and API-driven automation.</p>
-              <a href="#" className={styles.cardLink}>Coming Soon &rarr;</a>
+               <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
+              <h3 className={styles.cardTitle}>Bridging the Gap: DevSecOps in Practice</h3>
+              <p className={styles.cardDesc}>Practical strategies for integrating security controls into CI/CD pipelines without slowing down engineering velocity.</p>
+              <Link href="/blog" className={styles.cardLink}>Read Post &rarr;</Link>
             </div>
+          </div>
+          <div style={{ textAlign: "center", marginTop: "4rem" }}>
+            <Link href="/blog" className={styles.btnSecondary}>View All Posts &rarr;</Link>
           </div>
         </div>
       </section>
