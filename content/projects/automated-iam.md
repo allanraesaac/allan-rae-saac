@@ -1,6 +1,6 @@
 ---
 title: "Automated IAM Lifecycle"
-date: "2024-05-10"
+date: "10-May-2024"
 excerpt: "Integrating HRIS driven provisioning with modern identity platforms using infrastructure as code and API-driven automation."
 ---
 

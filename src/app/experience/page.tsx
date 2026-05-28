@@ -12,7 +12,7 @@ export default function ExperiencePage() {
       {/* Navigation */}
       <nav className={styles.nav}>
         <div className={styles.navLogo}>
-          <Link href="/"><span className="text-gradient">A.S.</span></Link>
+          <Link href="/"><span className="text-gradient">Allan Rae Saac</span></Link>
         </div>
         <div className={styles.navLinks}>
           <Link href="/#about">About</Link>

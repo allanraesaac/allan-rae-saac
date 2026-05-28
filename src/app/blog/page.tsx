@@ -1,5 +1,6 @@
 import Link from "next/link";
 import styles from "../page.module.css";
+import { getSortedPostsData } from "../../lib/markdown";
 
 export const metadata = {
   title: "Blog | Allan Rae Saac",
@@ -7,18 +8,20 @@ export const metadata = {
 };
 
 export default function BlogPage() {
+  const posts = getSortedPostsData("blog");
+
   return (
     <main className={styles.main}>
       {/* Navigation */}
       <nav className={styles.nav}>
         <div className={styles.navLogo}>
-          <Link href="/"><span className="text-gradient">A.S.</span></Link>
+          <Link href="/"><span className="text-gradient">Allan Rae Saac</span></Link>
         </div>
         <div className={styles.navLinks}>
           <Link href="/#about">About</Link>
           <Link href="/#experience">Experience</Link>
           <Link href="/projects">Projects</Link>
-          <Link href="/#certifications">Certifications</Link>
+          <Link href="/certifications">Certifications</Link>
           <Link href="/blog" style={{ color: "var(--accent-cyan)" }}>Blog</Link>
           <Link href="/#contact">Contact</Link>
         </div>
@@ -37,26 +40,17 @@ export default function BlogPage() {
         </p>
 
         <div className={styles.grid}>
-          <div className={`${styles.card} glass`}>
-            <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
-            <h3 className={styles.cardTitle}>The Evolution of IAM in Cloud-Native Environments</h3>
-            <p className={styles.cardDesc}>A look into how identity is becoming the new perimeter and what that means for traditional network security architectures. We explore OAuth, OIDC, and zero trust models applied to modern workloads.</p>
-            <Link href="/blog/iam-evolution" className={styles.cardLink}>Read Post &rarr;</Link>
-          </div>
-          
-          <div className={`${styles.card} glass`}>
-             <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
-            <h3 className={styles.cardTitle}>Bridging the Gap: DevSecOps in Practice</h3>
-            <p className={styles.cardDesc}>Practical strategies for integrating security controls into CI/CD pipelines without slowing down engineering velocity. Real-world examples of embedding security directly into the developer workflow.</p>
-            <Link href="/blog/devsecops-practice" className={styles.cardLink}>Read Post &rarr;</Link>
-          </div>
-
-          <div className={`${styles.card} glass`}>
-             <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
-            <h3 className={styles.cardTitle}>Translating Security Risk to Business Value</h3>
-            <p className={styles.cardDesc}>How to communicate effectively with stakeholders. A guide on framing cybersecurity initiatives in terms of risk mitigation and business enablement rather than purely technical hurdles.</p>
-            <a href="#" className={styles.cardLink}>Coming Soon &rarr;</a>
-          </div>
+          {posts.map((post) => (
+            <div className={`${styles.card} glass`} key={post.slug}>
+              <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
+              <h3 className={styles.cardTitle}>{post.title}</h3>
+              <p className={styles.cardDesc} style={{ flexGrow: 1 }}>{post.excerpt || "Click to read more about this topic."}</p>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1rem" }}>
+                <span style={{ color: "var(--accent-purple)", fontSize: "0.85rem", fontWeight: "600" }}>{post.date}</span>
+                <Link href={`/blog/${post.slug}`} className={styles.cardLink}>Read Post &rarr;</Link>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

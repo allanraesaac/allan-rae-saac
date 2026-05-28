@@ -1,6 +1,6 @@
 ---
 title: "Zero Trust Cloud Implementation"
-date: "2025-10-01"
+date: "01-Oct-2025"
 excerpt: "Designing scalable, identity-first cloud architectures prioritizing least privilege and robust governance across multicloud environments."
 ---
 

@@ -18,7 +18,7 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
     <main className={styles.main}>
       <nav className={styles.nav}>
         <div className={styles.navLogo}>
-          <Link href="/"><span className="text-gradient">A.S.</span></Link>
+          <Link href="/"><span className="text-gradient">Allan Rae Saac</span></Link>
         </div>
         <div className={styles.navLinks}>
           <Link href="/#about">About</Link>
@@ -32,18 +32,24 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
 
       <article className={styles.sectionContent} style={{ paddingTop: "120px", minHeight: "80vh", maxWidth: "800px", margin: "0 auto" }}>
         <div style={{ marginBottom: "2rem" }}>
-          <Link href="/#blog" className={styles.cardLink}>&larr; Back to Blog</Link>
+          <Link href="/blog" style={{ display: "inline-block", padding: "0.5rem 1rem", background: "var(--bg-secondary)", borderRadius: "20px", color: "var(--text-secondary)", textDecoration: "none", fontSize: "0.9rem", transition: "all 0.3s ease", border: "1px solid var(--border-color)" }}>&larr; Back to Blog</Link>
         </div>
         
-        <h1 className={styles.sectionTitle} style={{ textAlign: "left", marginBottom: "1rem" }}>
-          <span className="text-gradient">{postData.title}</span>
-        </h1>
-        <p style={{ color: "var(--accent-purple)", marginBottom: "3rem", fontWeight: "600" }}>{postData.date}</p>
+        <div className="glass" style={{ padding: "3rem", borderRadius: "16px", marginTop: "2rem" }}>
+          <h1 style={{ fontFamily: "var(--font-outfit), sans-serif", fontSize: "3rem", lineHeight: "1.2", marginBottom: "1rem", color: "var(--text-primary)" }}>
+            {postData.title}
+          </h1>
+          
+          <div style={{ display: "flex", alignItems: "center", gap: "1rem", marginBottom: "3rem", paddingBottom: "2rem", borderBottom: "1px solid var(--border-color)" }}>
+            <span style={{ color: "var(--accent-purple)", fontWeight: "600", background: "rgba(189, 147, 249, 0.1)", padding: "0.3rem 0.8rem", borderRadius: "12px", fontSize: "0.9rem" }}>{postData.date}</span>
+            <span style={{ color: "var(--text-secondary)", fontSize: "0.9rem" }}>5 min read</span>
+          </div>
 
-        <div 
-          className="markdown-content"
-          dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }} 
-        />
+          <div 
+            className="markdown-content"
+            dangerouslySetInnerHTML={{ __html: postData.contentHtml || "" }} 
+          />
+        </div>
       </article>
 
       <footer className={styles.footer}>

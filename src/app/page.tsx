@@ -1,34 +1,20 @@
-"use client";
-
-import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.css";
+import { getSortedPostsData } from "../lib/markdown";
+import ScrollReveal from "../components/ScrollReveal";
 
 export default function Home() {
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
+  const latestProjects = getSortedPostsData("projects").slice(0, 2);
+  const latestBlogs = getSortedPostsData("blog").slice(0, 2);
 
   return (
     <main className={styles.main}>
+      <ScrollReveal />
       {/* Navigation */}
       <nav className={styles.nav}>
         <div className={styles.navLogo}>
-          <span className="text-gradient">A.S.</span>
+          <span className="text-gradient">Allan Rae Saac</span>
         </div>
         <div className={styles.navLinks}>
           <Link href="/#about">About</Link>
@@ -105,7 +91,7 @@ export default function Home() {
             </div>
           </div>
           <div style={{ textAlign: "center", marginTop: "3rem" }}>
-            <Link href="/experience" className={styles.btnSecondary}>See More Journey &rarr;</Link>
+            <Link href="/experience" className={styles.btnSecondary}>View Full Experience &rarr;</Link>
           </div>
         </div>
       </section>
@@ -113,22 +99,22 @@ export default function Home() {
       {/* Projects */}
       <section id="projects" className="reveal">
         <div className={styles.sectionContent}>
-          <h2 className={styles.sectionTitle}>
-            Featured <span className="text-gradient">Projects</span>
-          </h2>
+          <h2 className={styles.sectionTitle}>Featured <span className="text-gradient">Projects</span></h2>
           <div className={styles.grid}>
-            <div className={`${styles.card} glass reveal`}>
-              <Image src="/images/project_zero_trust.png" alt="Zero Trust Architecture" width={400} height={200} className={styles.cardImage} />
-              <h3 className={styles.cardTitle}>Zero Trust Cloud Implementation</h3>
-              <p className={styles.cardDesc}>Designing scalable, identity-first cloud architectures prioritizing least privilege and robust governance across multicloud environments.</p>
-              <Link href="/projects/zero-trust-cloud" className={styles.cardLink}>View Details &rarr;</Link>
-            </div>
-            <div className={`${styles.card} glass reveal`}>
-              <Image src="/images/project_iam.png" alt="Automated IAM" width={400} height={200} className={styles.cardImage} />
-              <h3 className={styles.cardTitle}>Automated IAM Lifecycle</h3>
-              <p className={styles.cardDesc}>Integrating HRIS driven provisioning with modern identity platforms using infrastructure as code and API-driven automation.</p>
-              <Link href="/projects/automated-iam" className={styles.cardLink}>View Details &rarr;</Link>
-            </div>
+            {latestProjects.map((project) => (
+              <div className={`${styles.card} glass reveal`} key={project.slug}>
+                {(project.slug === 'zero-trust-cloud' || project.slug === 'automated-iam') ? (
+                  <Image src={`/images/project_${project.slug === 'zero-trust-cloud' ? 'zero_trust' : 'iam'}.png`} alt={project.title} width={400} height={200} className={styles.cardImage} />
+                ) : (
+                  <div style={{ height: "200px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
+                )}
+                <h3 className={styles.cardTitle}>{project.title}</h3>
+                <p className={styles.cardDesc} style={{ flexGrow: 1 }}>{project.excerpt}</p>
+                <div style={{ display: "flex", justifyContent: "flex-end", alignItems: "center", marginTop: "1rem" }}>
+                  <Link href={`/projects/${project.slug}`} className={styles.cardLink}>View Details &rarr;</Link>
+                </div>
+              </div>
+            ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "4rem" }}>
             <Link href="/projects" className={styles.btnPrimary}>View All Projects</Link>
@@ -144,7 +130,6 @@ export default function Home() {
           </h2>
           
           <div className={styles.marqueeWrapper}>
-            {/* First Row (Scrolling Left) */}
             <div className={styles.marquee}>
               <div className={`${styles.certBadge} ${styles.badgeAI}`}>AI for Blue Security</div>
               <div className={`${styles.certBadge} ${styles.badgeAI}`}>Azure AI Fundamentals</div>
@@ -165,7 +150,6 @@ export default function Home() {
               <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>ITIL 4 Foundation</div>
             </div>
             
-            {/* Second Row (Scrolling Right) */}
             <div className={styles.marqueeReverse} style={{ marginTop: "1rem" }}>
               <div className={`${styles.certBadge} ${styles.badgeAI}`}>Secure Dev with AI</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Blue Security Champions</div>
@@ -194,22 +178,19 @@ export default function Home() {
       {/* Blog */}
       <section id="blog" className="reveal">
         <div className={styles.sectionContent}>
-          <h2 className={styles.sectionTitle}>
-            Latest <span className="text-gradient">Insights</span>
-          </h2>
+          <h2 className={styles.sectionTitle}>Latest <span className="text-gradient">Insights</span></h2>
           <div className={styles.grid}>
-            <div className={`${styles.card} glass reveal`}>
-              <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
-              <h3 className={styles.cardTitle}>The Evolution of IAM in Cloud-Native Environments</h3>
-              <p className={styles.cardDesc}>A look into how identity is becoming the new perimeter and what that means for traditional network security architectures.</p>
-              <Link href="/blog/iam-evolution" className={styles.cardLink}>Read Post &rarr;</Link>
-            </div>
-            <div className={`${styles.card} glass reveal`}>
-               <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
-              <h3 className={styles.cardTitle}>Bridging the Gap: DevSecOps in Practice</h3>
-              <p className={styles.cardDesc}>Practical strategies for integrating security controls into CI/CD pipelines without slowing down engineering velocity.</p>
-              <Link href="/blog/devsecops-practice" className={styles.cardLink}>Read Post &rarr;</Link>
-            </div>
+            {latestBlogs.map((blog) => (
+              <div className={`${styles.card} glass reveal`} key={blog.slug}>
+                <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
+                <h3 className={styles.cardTitle}>{blog.title}</h3>
+                <p className={styles.cardDesc} style={{ flexGrow: 1 }}>{blog.excerpt}</p>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1rem" }}>
+                  <span style={{ color: "var(--accent-purple)", fontSize: "0.85rem", fontWeight: "600" }}>{blog.date}</span>
+                  <Link href={`/blog/${blog.slug}`} className={styles.cardLink}>Read Post &rarr;</Link>
+                </div>
+              </div>
+            ))}
           </div>
           <div style={{ textAlign: "center", marginTop: "4rem" }}>
             <Link href="/blog" className={styles.btnSecondary}>View All Posts &rarr;</Link>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "../page.module.css";
+import { getSortedPostsData } from "../../lib/markdown";
 
 export const metadata = {
   title: "Projects | Allan Rae Saac",
@@ -8,18 +9,20 @@ export const metadata = {
 };
 
 export default function ProjectsPage() {
+  const projects = getSortedPostsData("projects");
+
   return (
     <main className={styles.main}>
       {/* Navigation */}
       <nav className={styles.nav}>
         <div className={styles.navLogo}>
-          <Link href="/"><span className="text-gradient">A.S.</span></Link>
+          <Link href="/"><span className="text-gradient">Allan Rae Saac</span></Link>
         </div>
         <div className={styles.navLinks}>
           <Link href="/#about">About</Link>
           <Link href="/#experience">Experience</Link>
           <Link href="/projects" style={{ color: "var(--accent-cyan)" }}>Projects</Link>
-          <Link href="/#certifications">Certifications</Link>
+          <Link href="/certifications">Certifications</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/#contact">Contact</Link>
         </div>
@@ -38,30 +41,24 @@ export default function ProjectsPage() {
         </p>
 
         <div className={styles.grid}>
-          <div className={`${styles.card} glass`}>
-            <Image src="/images/project_zero_trust.png" alt="Zero Trust Architecture" width={400} height={200} className={styles.cardImage} />
-            <h3 className={styles.cardTitle}>Zero Trust Cloud Implementation</h3>
-            <p className={styles.cardDesc}>Designing scalable, identity-first cloud architectures prioritizing least privilege and robust governance across multicloud environments. Leveraging modern frameworks to ensure continuous verification of identities and devices before granting access.</p>
-            <Link href="/projects/zero-trust-cloud" className={styles.cardLink}>View Details &rarr;</Link>
-          </div>
-          <div className={`${styles.card} glass`}>
-            <Image src="/images/project_iam.png" alt="Automated IAM" width={400} height={200} className={styles.cardImage} />
-            <h3 className={styles.cardTitle}>Automated IAM Lifecycle</h3>
-            <p className={styles.cardDesc}>Integrating HRIS driven provisioning with modern identity platforms using infrastructure as code and API-driven automation. This project eliminated manual provisioning errors and drastically reduced onboarding times.</p>
-            <Link href="/projects/automated-iam" className={styles.cardLink}>View Details &rarr;</Link>
-          </div>
-          <div className={`${styles.card} glass`}>
-             <div style={{ height: "200px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
-            <h3 className={styles.cardTitle}>DevSecOps Pipeline Integration</h3>
-            <p className={styles.cardDesc}>Embed automated SAST, DAST, and SCA scanning into CI/CD workflows. Built actionable feedback loops for engineering teams without impeding deployment velocity.</p>
-            <a href="#" className={styles.cardLink}>Coming Soon &rarr;</a>
-          </div>
-          <div className={`${styles.card} glass`}>
-             <div style={{ height: "200px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
-            <h3 className={styles.cardTitle}>Vulnerability Management Automation</h3>
-            <p className={styles.cardDesc}>Developed scripts and workflows to aggregate vulnerability findings across multiple tools into a single pane of glass, streamlining the prioritization and remediation tracking process.</p>
-            <a href="#" className={styles.cardLink}>Coming Soon &rarr;</a>
-          </div>
+          {projects.map((project) => (
+            <div className={`${styles.card} glass`} key={project.slug}>
+              {/* Dynamic Image or Placeholder */}
+              {(project.slug === 'zero-trust-cloud' || project.slug === 'automated-iam') ? (
+                <Image src={`/images/project_${project.slug === 'zero-trust-cloud' ? 'zero_trust' : 'iam'}.png`} alt={project.title} width={400} height={200} className={styles.cardImage} />
+              ) : (
+                <div style={{ height: "200px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
+              )}
+              
+              <h3 className={styles.cardTitle}>{project.title}</h3>
+              <p className={styles.cardDesc} style={{ flexGrow: 1 }}>{project.excerpt || "Click to view full project details."}</p>
+              
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1rem" }}>
+                <span style={{ color: "var(--accent-cyan)", fontSize: "0.85rem", fontWeight: "600" }}>{project.date}</span>
+                <Link href={`/projects/${project.slug}`} className={styles.cardLink}>View Details &rarr;</Link>
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 
