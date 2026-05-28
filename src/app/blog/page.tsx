@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../page.module.css";
 import { getSortedPostsData } from "../../lib/markdown";
 
@@ -42,7 +43,7 @@ export default function BlogPage() {
         <div className={styles.grid}>
           {posts.map((post) => (
             <div className={`${styles.card} glass`} key={post.slug}>
-              <div style={{ height: "150px", background: "var(--bg-tertiary)", borderRadius: "8px", marginBottom: "1.5rem" }}></div>
+              <Image src={`/images/blog_${post.slug}.png`} alt={post.title} width={400} height={200} className={styles.cardImage} />
               <h3 className={styles.cardTitle}>{post.title}</h3>
               <p className={styles.cardDesc} style={{ flexGrow: 1 }}>{post.excerpt || "Click to read more about this topic."}</p>
               <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1rem" }}>
@@ -54,8 +55,13 @@ export default function BlogPage() {
         </div>
       </section>
 
-      <footer className={styles.footer}>
-        &copy; {new Date().getFullYear()} Allan Rae Saac.
+      <footer className={styles.footer} style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1rem" }}>
+        <span>&copy; {new Date().getFullYear()} Allan Rae Saac.</span>
+        <a href="https://github.com/AllanRaeSaac" target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", color: "var(--text-secondary)", transition: "color 0.3s ease" }}>
+          <svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ verticalAlign: "middle" }}>
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+          </svg>
+        </a>
       </footer>
     </main>
   );
