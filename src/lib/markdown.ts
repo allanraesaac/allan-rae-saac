@@ -11,7 +11,8 @@ export interface PostData {
   title: string;
   date: string;
   excerpt?: string;
-  contentHtml?: string;
+  content?: string;
+  tags?: string[];
   [key: string]: any;
 }
 
@@ -42,7 +43,7 @@ export function getSortedPostsData(folder: string): PostData[] {
       // Combine the data with the slug
       return {
         slug,
-        ...(matterResult.data as { title: string; date: string; excerpt?: string }),
+        ...(matterResult.data as { title: string; date: string; excerpt?: string; tags?: string[] }),
       };
     });
 
@@ -87,16 +88,13 @@ export async function getPostData(folder: string, slug: string): Promise<PostDat
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
 
-  // Use remark to convert markdown into HTML string
-  const processedContent = await remark()
-    .use(html)
-    .process(matterResult.content);
-  const contentHtml = processedContent.toString();
+  // Strip the first H1 heading to avoid duplicating the title rendered by the page template
+  const rawContent = matterResult.content.replace(/^#\s+.*$/m, '').trim();
 
-  // Combine the data with the slug and contentHtml
+  // Combine the data with the slug and raw content for MDX
   return {
     slug,
-    contentHtml,
-    ...(matterResult.data as { title: string; date: string }),
+    content: rawContent,
+    ...(matterResult.data as { title: string; date: string; tags?: string[] }),
   };
 }

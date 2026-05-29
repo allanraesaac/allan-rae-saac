@@ -2,6 +2,7 @@
 title: "What IT Risk Taught Me About Engineering"
 date: "28-May-2026"
 excerpt: "Risk isn't just about compliance spreadsheets; it's a fundamental engineering principle that determines how systems scale securely."
+tags: ["Risk"]
 ---
 
 # What IT Risk Taught Me About Engineering

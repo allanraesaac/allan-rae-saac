@@ -131,3 +131,26 @@ section {
 .markdown-content ul, .markdown-content ol { margin-bottom: 1.5rem; padding-left: 2rem; color: var(--text-secondary); line-height: 1.8; font-size: 1.1rem; }
 .markdown-content li { margin-bottom: 0.5rem; }
 .markdown-content strong { color: var(--text-primary); font-weight: 600; }
+
+/* Accessibility: Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Social Icon Interactions */
+.social-icon:hover {
+  color: var(--accent-cyan) !important;
+  transform: translateY(-3px) scale(1.1);
+  filter: drop-shadow(0 0 8px var(--accent-cyan-dim));
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}

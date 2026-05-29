@@ -2,6 +2,7 @@
 title: "The Evolution of IAM in Cloud-Native Environments"
 date: "2026-05-15"
 excerpt: "A look into how identity is becoming the new perimeter and what that means for traditional network security architectures."
+tags: ["IAM"]
 ---
 
 # The Evolution of IAM in Cloud-Native Environments

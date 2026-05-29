@@ -2,6 +2,7 @@
 title: "Bridging the Gap: DevSecOps in Practice"
 date: "2026-04-20"
 excerpt: "Practical strategies for integrating security controls into CI/CD pipelines without slowing down engineering velocity."
+tags: ["DevSecOps"]
 ---
 
 # Bridging the Gap: DevSecOps in Practice

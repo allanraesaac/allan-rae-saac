@@ -2,6 +2,7 @@
 title: "Security Analytics Reviews Assistant"
 date: "10-Mar-2026"
 excerpt: "An AI-powered assistant designed to automate and streamline the review of security analytics, logs, and SIEM alerts."
+tags: ["Security"]
 ---
 
 # Security Analytics Reviews Assistant

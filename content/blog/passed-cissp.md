@@ -2,6 +2,7 @@
 title: "How I Passed CISSP: A Strategic Approach"
 date: "28-May-2026"
 excerpt: "Passing the CISSP isn't just about technical knowledge; it's about understanding the mindset of a risk advisor. Here's how I tackled it."
+tags: ["Certification"]
 ---
 
 # How I Passed CISSP: A Strategic Approach

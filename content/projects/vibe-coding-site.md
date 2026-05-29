@@ -2,6 +2,7 @@
 title: "Vibe Coding Personal Site"
 date: "28-May-2026"
 excerpt: "Building a high-performance, edge-rendered portfolio using Next.js, React, and an AI agent to achieve the ultimate 'vibe'."
+tags: ["Development"]
 ---
 
 # Vibe Coding a Personal Site
