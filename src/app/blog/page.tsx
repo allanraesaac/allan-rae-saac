@@ -22,10 +22,10 @@ export default function BlogPage() {
         </div>
         
         <h1 className={styles.sectionTitle} style={{ textAlign: "left", marginBottom: "1rem" }}>
-          Latest <span className="text-gradient">Insights</span>
+          Writing and <span className="text-gradient">Learning</span>
         </h1>
         <p className={styles.subtitle} style={{ marginBottom: "4rem" }}>
-          Thoughts, learnings, and technical deep-dives at the intersection of security, risk, and engineering.
+          Outside of work, I write about cybersecurity, certifications, running, and the systems that support long-term growth — because I believe meaningful progress is built through consistency, discipline, and continuous learning.
         </p>
 
         <ContentGrid items={posts} basePath="blog" accentColor="var(--accent-purple)" />

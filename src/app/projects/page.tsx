@@ -23,7 +23,7 @@ export default function ProjectsPage() {
           All <span className="text-gradient">Projects</span>
         </h1>
         <p className={styles.subtitle} style={{ marginBottom: "4rem" }}>
-          A deeper dive into the initiatives I've driven around Identity & Access Management, Cloud Security Architecture, and DevSecOps.
+          A deeper dive into initiatives and experiments across IAM, security automation, risk-aware engineering, cloud security, and DevSecOps.
         </p>
 
         <ContentGrid items={projects} basePath="projects" accentColor="var(--accent-cyan)" />

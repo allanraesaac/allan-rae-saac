@@ -22,7 +22,7 @@ export default function Home() {
             Risk & Engineering
           </h1>
           <p className={styles.subtitle}>
-            Hi, I’m Allan. Over 15 years in IT, with deep experience in IAM, security governance, controls, and enterprise risk — now building toward cloud security, DevSecOps, and security automation.
+            Hi, I’m Allan. I bring over 15 years of experience across IT operations, identity and access management, and cybersecurity risk — helping teams strengthen controls, manage technology risk, and improve security execution in enterprise environments. I’m now expanding that foundation into cloud security, DevSecOps, and security automation.
           </p>
           <div className={styles.ctaGroup}>
             <a href="#contact" className={styles.btnPrimary}>Get In Touch</a>
@@ -39,9 +39,13 @@ export default function Home() {
             About <span className="text-gradient">Me</span>
           </h2>
           <p className={`${styles.aboutText} glass`} style={{ padding: "2rem" }}>
-            I am an IT Risk and Cybersecurity professional with over 10 years of experience in IT and 5+ years specializing in IAM, security governance, and enterprise risk. My background has largely focused on bridging security, compliance, and operational realities across enterprise environments.
+            My career has been shaped by one consistent theme: understanding how technology, access, controls, and risk connect in real enterprise environments.
             <br /><br />
-            Recently, I’ve been transitioning deeper into DevSecOps and cloud-focused environments to better understand how security can be embedded directly into systems, pipelines, and engineering workflows. My long-term goal is to help design secure, scalable, and practical cloud-native systems where security becomes part of the architecture — not just an afterthought.
+            I started in hands-on IT operations and system administration, where I built a practical understanding of infrastructure, deployments, support, and the day-to-day realities of keeping technology running. That foundation later developed into deeper work in Identity and Access Management, where I supported access governance, lifecycle controls, least privilege, and audit readiness within a regulated financial environment.
+            <br /><br />
+            Today, I work in IT Risk and Cybersecurity, collaborating with global teams across controls assurance, IAM, vulnerability management, platform security, IT resilience, change management, and compliance. My role often sits between security requirements and technical execution: translating control expectations into practical action, helping teams strengthen evidence and remediation, and supporting secure, risk-aware delivery.
+            <br /><br />
+            What differentiates my perspective is that I do not see governance and engineering as separate worlds. Effective security requires both: clear risk decisions and controls, supported by technical understanding, automation, and systems that teams can realistically operate.
           </p>
         </div>
       </section>
@@ -162,7 +166,7 @@ export default function Home() {
       {/* Blog */}
       <section id="blog" className="reveal">
         <div className={styles.sectionContent}>
-          <h2 className={styles.sectionTitle}>Latest <span className="text-gradient">Insights</span></h2>
+          <h2 className={styles.sectionTitle}>Writing and <span className="text-gradient">Learning</span></h2>
           <div className={styles.grid}>
             {latestBlogs.map((blog) => (
               <div className={`${styles.card} glass reveal`} key={blog.slug}>

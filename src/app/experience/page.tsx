@@ -21,7 +21,7 @@ export default function ExperiencePage() {
           Full Career <span className="text-gradient">Journey</span>
         </h1>
         <p className={styles.subtitle} style={{ marginBottom: "4rem" }}>
-          A detailed look at my roles, responsibilities, and the impact I've made over the last 15+ years in IT Risk, Cybersecurity, and Infrastructure.
+          A detailed look at my progression across IT operations, infrastructure, IAM, and cybersecurity risk.
         </p>
 
         <div className={styles.timeline}>
