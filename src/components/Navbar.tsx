@@ -5,7 +5,9 @@ export default function Navbar() {
   return (
     <nav className={styles.nav}>
       <div className={styles.navLogo}>
-        <span className="text-gradient">Allan Rae Saac</span>
+        <Link href="/" style={{ textDecoration: 'none' }}>
+          <span className="text-gradient">Allan Rae Saac</span>
+        </Link>
       </div>
       <div className={styles.navLinks}>
         <Link href="/#about">About</Link>

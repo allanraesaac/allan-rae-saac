@@ -122,7 +122,7 @@ export default function Home() {
               <div className={`${styles.certBadge} ${styles.badgeAI}`}>Blue Security</div>
               <div className={`${styles.certBadge} ${styles.badgeAI}`}>Azure Fundamentals</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISACA CRISC</div>
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Threat Model</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Threat Modelling</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISC2 CISSP</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Google Cyber</div>
               <div className={`${styles.certBadge} ${styles.badgeCloud}`}>Azure Fundamentals</div>
@@ -131,7 +131,7 @@ export default function Home() {
               <div className={`${styles.certBadge} ${styles.badgeAI}`}>Blue Security</div>
               <div className={`${styles.certBadge} ${styles.badgeAI}`}>Azure Fundamentals</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISACA CRISC</div>
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Threat Model</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Threat Modelling</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISC2 CISSP</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Google Cyber</div>
               <div className={`${styles.certBadge} ${styles.badgeCloud}`}>Azure Fundamentals</div>
@@ -140,19 +140,19 @@ export default function Home() {
             
             <div className={styles.marqueeReverse} style={{ marginTop: "1rem" }}>
               <div className={`${styles.certBadge} ${styles.badgeAI}`}>Secure Dev</div>
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Blue Champions</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Blue Sec Champion</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISC2 CC</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>CompTIA Sec+</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>MS SC-900</div>
-              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS Pract</div>
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS CCP</div>
               <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>Microservices</div>
               
               <div className={`${styles.certBadge} ${styles.badgeAI}`}>Secure Dev</div>
-              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Blue Champions</div>
+              <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>Blue Champion</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>ISC2 CC</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>CompTIA Sec+</div>
               <div className={`${styles.certBadge} ${styles.badgeSecurity}`}>MS SC-900</div>
-              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS Pract</div>
+              <div className={`${styles.certBadge} ${styles.badgeCloud}`}>AWS CCP</div>
               <div className={`${styles.certBadge} ${styles.badgeMgmt}`}>Microservices</div>
             </div>
           </div>
@@ -195,7 +195,8 @@ export default function Home() {
             Let's <span className="text-gradient">Connect</span>
           </h2>
           <p className={styles.subtitle} style={{ margin: "0 auto 2rem auto" }}>
-            Let’s connect if you’re working on cybersecurity, GRC, IAM, cloud security, DevSecOps, or security automation.
+            Let's talk security. <br />
+            Whether you're rethinking your risk posture, building a DevSecOps pipeline, or just want to swap notes on IAM and cloud security — I'd genuinely enjoy the conversation.
           </p>
           <div className={styles.ctaGroup} style={{ justifyContent: "center" }}>
             <a href="mailto:allanraesaac@gmail.com" className={styles.btnPrimary}>Email Me</a>
