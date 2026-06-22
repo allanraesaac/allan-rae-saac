@@ -3,6 +3,7 @@ import Link from "next/link";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import styles from "../../page.module.css";
 import React from "react";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   const posts = getAllPostSlugs("blog");
@@ -13,7 +14,8 @@ export async function generateStaticParams() {
 
 export default async function BlogPost({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params;
-  const postData = await getPostData("blog", resolvedParams.slug);
+  const postData = await getPostData("blog", resolvedParams.slug).catch(() => null);
+  if (!postData) notFound();
 
   return (
     <div className={styles.main}>

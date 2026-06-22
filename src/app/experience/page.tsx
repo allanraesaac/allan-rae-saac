@@ -27,8 +27,17 @@ export default function ExperiencePage() {
         <div className={styles.timeline}>
           <div className={styles.timelineItem}>
             <div className={styles.timelineDot}></div>
+            <h3 className={styles.timelineTitle}>DevOps Engineer</h3>
+            <p className={styles.timelineSubtitle}>ING &bull; Jun 2026 - Present</p>
+            <p className={styles.timelineDesc}>
+              Just swapped the audit evidence for deployment pipelines. The risk mindset came along for the ride — chapter one, still loading.
+            </p>
+          </div>
+
+          <div className={styles.timelineItem}>
+            <div className={styles.timelineDot}></div>
             <h3 className={styles.timelineTitle}>IT Risk Ops Engineer</h3>
-            <p className={styles.timelineSubtitle}>ING &bull; Sep 2023 - Present</p>
+            <p className={styles.timelineSubtitle}>ING &bull; Sep 2023 - Jun 2026</p>
             <p className={styles.timelineDesc}>
               • Led execution and continuous improvement of IT risk controls, SOx compliance activities, and security operations across multiple enterprise domains, including IAM, Vulnerability Management, Security Monitoring, and Change Management.<br/><br/>
               • Managed end-to-end control execution and audit readiness for critical applications, driving high-quality evidence validation, remediation follow-through, and improved audit outcomes.<br/><br/>

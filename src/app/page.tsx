@@ -59,8 +59,16 @@ export default function Home() {
           <div className={styles.timeline}>
             <div className={`${styles.timelineItem} reveal`}>
               <div className={styles.timelineDot}></div>
+              <h3 className={styles.timelineTitle}>DevOps Engineer</h3>
+              <p className={styles.timelineSubtitle}>ING &bull; Jun 2026 - Present</p>
+              <p className={styles.timelineDesc}>
+                Just swapped the audit evidence for deployment pipelines. The risk mindset came along for the ride.
+              </p>
+            </div>
+            <div className={`${styles.timelineItem} reveal`}>
+              <div className={styles.timelineDot}></div>
               <h3 className={styles.timelineTitle}>IT Risk Ops Engineer</h3>
-              <p className={styles.timelineSubtitle}>ING &bull; Sep 2023 - Present</p>
+              <p className={styles.timelineSubtitle}>ING &bull; Sep 2023 - Jun 2026</p>
               <p className={styles.timelineDesc}>
                 Led execution and continuous improvement of IT risk controls, SOx compliance, and security operations across IAM, Vulnerability Management, and Change Management. Drove Vulnerability Management initiatives coordinating remediation and collaborating with DevOps teams on SAST/DAST issues.
               </p>
